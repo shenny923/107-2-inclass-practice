@@ -1,0 +1,98 @@
+---
+title: '2019-03-20'
+author: ""
+date: "3/20/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+dialogue <- c('小明說："明天不用上課。"',
+               '小花說："真的嗎？"')
+
+cat(dialogue, sep="\n")
+```
+
+```{r}
+dialogue <- c('小明說：'明天不用上課。'',
+               '小花說：'真的嗎？'')
+
+cat(dialogue, sep="\n")
+```
+
+```{r}
+dialogue <- c("小明說：'明天不用上課。'",
+               "小花說：'真的嗎？'")
+
+cat(dialogue, sep="\n")
+```
+
+```{r}
+dialogue <- c('助教說："明天要上實習課。"',
+               '我說："可以不要嗎？"')
+
+cat(dialogue, sep="\n")
+```
+
+```{r}
+aLogical <- c(T,TRUE,F,FALSE,FALSE)
+class(aLogical)
+```
+
+```{r}
+sum(aLogical)
+```
+
+```{r}
+birthplace<-factor(
+  c("台中市","台北市","新北市")
+)
+class(birthplace)
+typeof(birthplace)
+levels(birthplace)
+as.integer(birthplace)
+```
+
+```{r}
+horoscope<-factor(c("天秤座","牡羊座","處女座"))
+levels(horoscope)
+```
+
+```{r}
+library(lubridate)
+```
+
+```{r}
+dtObject<-ymd_hms("1970-01-01 00:02:53") 
+```
+
+```{r}
+dtObjectVector<-ymd_hms(
+  c("1970-01-01 00:02:53",
+    "1980-02-11 11:25:22")
+)
+```
+
+```{r}
+class(dtObject)
+```
+
+```{r}
+dtObject
+```
+
+```{r}
+typeof(dtObject)
+```
+
+```{r}
+as.double(dtObject)
+```
+
+```{r}
+Sys.timezone()
+```
+
