@@ -528,13 +528,55 @@ satisfyBoth <- isNotNA & isEuro
 sum(satisfyBoth)
 ```
 
+```{r}
+satifyBoth<-
+  !is.na(exchangeRate)&currency == "歐元USD/EUR"
+sum(satifyBoth)
+```
 
+```{r}
+library(readr)
+transcriptDataFinal <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcriptDataFinal.csv")
+courseType <- transcriptDataFinal$`必選修類別（必∕選∕通）`
+major <- transcriptDataFinal$學系
+studentID <- transcriptDataFinal$學號
+grade <- transcriptDataFinal$學期成績
+```
+```{r}
+sum(major == "經濟學系")
+``` 
 
+```{r}
+sum(studentID=="5bdS6977b")
+```
 
+```{r}
+sum(
+  (studentID=="5bdS6977b")&
+    (grade>=60))
+```
 
+```{r}
+sum(major=="經濟學系"&
+      courseType=="選")
+```
 
+```{r}
+sum(major=="經濟學系"&
+      courseType=="必")->分母
+分母
+```
 
+```{r}
+sum(major=="經濟學系"&
+      courseType=="必"&
+      grade<60)->分子
+分子
+```
 
+```{r}
+分子/分母
+```
 
 
 
