@@ -14,8 +14,8 @@ mat1
 ```{r}
 mat2<-matrix(c("a","b","c","d"),2,2)
 mat2
-class(m2)
-typeof(m2)
+class(mat2)
+typeof(mat2)
 mat2[[2]]
 ```
 
@@ -64,6 +64,15 @@ matObj1
 ```
 
 ```{r}
+matObj1[3,2]
+```
+
+```{r}
+matObj1[c(F,F,TRUE,F,F),c(F,TRUE,F)]
+```
+
+
+```{r}
 chosenLETTERS2 <- letters[1:12]
 mat123 <- matrix(chosenLETTERS2,6,2)
 mat123
@@ -79,5 +88,22 @@ tolower(m) # 轉成小寫
 m
 toupper(m) # 轉成大寫
 m
+```
+
+```{r}
+library(readr)
+classSurvey <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/classSurvey.csv")
+```
+
+```{r}
+classSurvey[,4:5]
+```
+
+```{r}
+classSurvey[,c(F,F,F,T,T,F)]
+```
+
+```{r}
+classSurvey[c("性別","本學期學分數")]
 ```
 
