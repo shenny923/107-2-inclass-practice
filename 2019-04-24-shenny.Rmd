@@ -1,0 +1,83 @@
+---
+title: '2019-04-24'
+author: "林茂廷"
+date: "4/24/2019"
+output: html_document
+---
+
+```{r}
+mat1<-matrix(c(1:6),2,3)
+mat1
+```
+
+
+```{r}
+mat2<-matrix(c("a","b","c","d"),2,2)
+mat2
+class(m2)
+typeof(m2)
+mat2[[2]]
+```
+
+```{r}
+StuList <- list(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuList 
+```
+
+```{r}
+StuDF <- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuDF 
+```
+
+```{r}
+StuDF[[2]][[3]]
+StuDF[["姓名"]][[3]]
+```
+
+```{r}
+StuDF <- data.frame(
+  學號=c(172,214,322,425,517),
+  姓名=c("小明","大雄","胖虎","小新","大白"),
+  成績=c(80,60,90,70,50)
+  )
+StuDF 
+```
+
+```{r}
+as.data.frame(StuList) -> StuDF3
+StuDF3
+class(StuDF3)
+```
+
+```{r}
+chosenLETTERS <- LETTERS[1:15]
+matObj1 <- matrix(chosenLETTERS,5,3)
+matObj1
+```
+
+```{r}
+chosenLETTERS2 <- letters[1:12]
+mat123 <- matrix(chosenLETTERS2,6,2)
+mat123
+mat123[3,1]
+```
+
+```{r}
+LETTERS
+chosenLETTERS <- LETTERS[1:8]
+m <- matrix(chosenLETTERS,2,4)
+m
+tolower(m) # 轉成小寫
+m
+toupper(m) # 轉成大寫
+m
+```
+
