@@ -114,15 +114,40 @@ for(i in seq_along(commitHistory)){
 }
 ```
 
+##範例三
+資料
+```{r}
+load(url("https://www.dropbox.com/s/qnz9paigf61yjus/commitHistory.Rda?raw=1"))
+```
+saving container
+```{r}
+saveCommitAuthor <-
+  vector("character",length(commitHistory))
+```
+sequence source
+```{r}
+commitHistory
+```
+body
+```{r}
+i<-1
 
+commitHistory[[i]]$commit$author$name -> saveCommitAuthor[[i]]
+```
+檢查一下
+```{r}
+saveCommitAuthor
+```
 for loop
+```{r}
+saveCommitAuthor <-
+  vector("character",length(commitHistory)) # 0.
 for(i in seq_along(commitHistory)){
-  (commitHistory[[i]][["commit"]][["author"]][["name"]]==
-     commitHistory[[i]][["commit"]][["committer"]][["name"]]) ->
-    logiResult
-  print(logiResult)  
+  commitHistory[[i]]$commit$author$name -> saveCommitAuthor[[i]]
 }
 
+saveCommitAuthor
+```
 
 
 
